@@ -4,8 +4,15 @@
   "packageManager": "yarn@3.4.1",
   "version": "0.1.0",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
@@ -28,6 +35,7 @@
     "prettier": "^2.8.4",
     "rimraf": "^4.4.0",
     "standard-version": "^9.5.0",
+    "turbo": "^1.8.3",
     "typescript": "^4.9.5"
   }
 }
