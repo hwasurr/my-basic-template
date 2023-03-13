@@ -16,7 +16,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     // This option allows you to provide a path to your project's tsconfig.json.
     // This setting is required if you want to use rules which require type information.
-    project: ["./tsconfig.base.json", "./packages/**/tsconfig.json"],
+    project: ["./tsconfig.base.json", "./libs/**/tsconfig.json", "./apps/**/tsconfig.json"],
   },
   ignorePatterns: [".eslintrc.js"],
   settings: {

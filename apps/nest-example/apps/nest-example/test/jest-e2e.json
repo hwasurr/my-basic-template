@@ -1,0 +1,17 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@app/nest-lib-example/(.*)": "<rootDir>/../libs/nest-lib-example/src/$1",
+    "@app/nest-lib-example": "<rootDir>/../libs/nest-lib-example/src"
+  }
+}
