@@ -2,25 +2,28 @@ module.exports = {
   root: true,
   extends: [
     "airbnb",
+    "turbo",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:storybook/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
     tsconfigRootDir: __dirname,
-    // This option allows you to provide a path to your project's tsconfig.json.
-    // This setting is required if you want to use rules which require type information.
     project: ["./tsconfig.base.json", "./libs/**/tsconfig.json", "./apps/**/tsconfig.json"],
   },
   ignorePatterns: [".eslintrc.js"],
   settings: {
     "import/resolver": {
+      typescript: {
+        project: ["./tsconfig.base.json", "./libs/**/tsconfig.json", "./apps/**/tsconfig.json"],
+      },
       node: {
         extensions: [".js", ".ts", ".jsx", ".tsx"],
       },
@@ -141,3 +144,4 @@ module.exports = {
     },
   ],
 };
+

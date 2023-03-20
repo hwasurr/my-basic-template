@@ -2,3 +2,6 @@ dist
 build
 .yarn
 node_modules
+generated
+_generated_
+__generated__
