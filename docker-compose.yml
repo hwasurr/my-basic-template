@@ -4,4 +4,4 @@ services:
     container_name: mongo-example
     image: mongo:6
     ports:
-      - 27017:27017
+      - 27000:27017

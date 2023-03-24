@@ -1,17 +1,14 @@
-import { MongooseConfigService, validationSchema } from '@my-nest/config';
+import { MongooseConfigService } from '@my-nest/config';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { configModuleOptions } from './settings/env.config';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      envFilePath: ['./env.development.local'],
-      isGlobal: true,
-      validationSchema,
-    }),
+    ConfigModule.forRoot(configModuleOptions),
     MongooseModule.forRootAsync({ useClass: MongooseConfigService }),
   ],
   controllers: [AppController],

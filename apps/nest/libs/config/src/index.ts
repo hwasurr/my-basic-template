@@ -1,2 +1,2 @@
 export * from './mongoose.config';
-export * from './validation-schema';
+export * from './env.config.generator';

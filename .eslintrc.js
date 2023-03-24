@@ -75,6 +75,7 @@ module.exports = {
             allowExpressions: true,
           },
         ],
+        "no-underscore-dangle": "off"
       },
     },
     // Typescript specific rules
@@ -99,6 +100,7 @@ module.exports = {
         "class-methods-use-this": "off",
         "import/newline-after-import": "error",
         "import/prefer-default-export": "off",
+        
       },
     },
     // React(jsx,tsx)  specific rules
